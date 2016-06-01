@@ -1,0 +1,21 @@
+<div class="card-panel teal lighten-2 orange accent-4 center"><strong>TODO LIST By: Ryan Jeff</strong></div>
+<table>
+  <thead>
+    <tr>
+        <th data-field="id">Todo #</th>
+        <th data-field="name">Name</th>
+        <th data-field="name">Resource</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+    <tr>
+      <td><strong><%= task.id %></strong></td>
+      <td><%= link_to task.name, task_path(task) %></td>
+      <td><%= link_to "Edit", edit_task_path(task), class: "waves-effect waves-light btn green" %> &nbsp;
+          <%= link_to "Delete", task_path(task), method: :delete, class: "waves-effect waves-light btn red" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  <%= link_to "Create New List", new_task_path, class: "waves-effect waves-light btn blue" %>
+</table>

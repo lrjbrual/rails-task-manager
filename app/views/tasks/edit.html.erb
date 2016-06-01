@@ -1,0 +1,7 @@
+<div class="card-panel teal lighten-2 center"><strong>Edit Your List</strong></div>
+<div class="row">
+  <%= render 'form' %>
+      <%= link_to "Back", tasks_path(), class: "waves-effect waves-light btn blue" %>
+      <%= link_to "Delete", task_path, method: :delete, class: "waves-effect waves-light btn red" %>
+      <%= link_to "Update", task_path, class: "waves-effect waves-light btn blue" %>
+</div>

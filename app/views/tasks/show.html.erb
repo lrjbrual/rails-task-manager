@@ -1,0 +1,25 @@
+<div class="card-panel teal lighten-2 orange accent-4 center"><strong>Your Task</strong></div>
+<table class="centered">
+  <thead>
+    <tr>
+        <th data-field="id">Todo #</th>
+        <th data-field="name">Name</th>
+        <th data-field="description">Description</th>
+        <th data-field="description">Status</th>
+        <th data-field="name">Resource</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><%= @task.id %></strong></td>
+      <td><%= @task.name %></td>
+      <td><%= @task.description %></td>
+      <td><%= @task.status %></td>
+      <td><%= link_to "Edit", edit_task_path, class: "waves-effect waves-light btn green" %>
+          <%= link_to "Delete", task_path, method: :delete, class: "waves-effect waves-light btn red" %>
+          <%= link_to "Update", task_path, class: "waves-effect waves-light btn blue" %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to "Back", tasks_path(), class: "waves-effect waves-light btn blue" %>
